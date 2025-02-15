@@ -1,7 +1,4 @@
-**Lecture 3: Introduction to Data Types in Python**
-
-**Session Duration: 3 Hours**
-
+## Lecture 3: Introduction to Data Types in Python
 ---
 
 ## **1. Introduction to Data Types in Python**
