@@ -1,6 +1,6 @@
 **Python Lecture 1: Introduction to Python Programming**
 
-**Duration:** 2.5 hours  
+**Duration:** 3 hours  
 
 ---
 
@@ -142,22 +142,50 @@ print(a < b)   # Less than
 
 ---
 
-## **9. Practice Problems**
-### **Beginner Level**
+## **9. Additional Python Data Types**
+### **Lists**
+```python
+fruits = ["apple", "banana", "cherry"]
+print(fruits[0])  # apple
+print(len(fruits)) # 3
+```
+
+### **Tuples**
+```python
+tuple_example = (10, 20, 30)
+print(tuple_example[1])  # 20
+```
+
+### **Dictionaries**
+```python
+person = {"name": "John", "age": 30}
+print(person["name"])  # John
+```
+
+---
+
+## **10. Practice Problems**  
+### **Beginner Level**  
 1. Write a program that prints "Python is amazing!"  
 2. Write a program that takes your name as input and greets you.  
 3. Write a program that takes two numbers as input and prints their sum.  
 
-### **Intermediate Level**
+### **Intermediate Level**  
 4. Write a program that converts Celsius to Fahrenheit.  
 5. Write a program that calculates the area of a rectangle given length and width.  
 
+### **Advanced Level**
+6. Write a program that stores a list of five favorite movies and prints them one by one.
+7. Create a dictionary storing information about a student (name, age, grade) and display it.
+
 ---
 
-## **10. Homework Assignment**
+## **11. Homework Assignment**  
 1. Write a Python program that asks for two numbers and performs addition, subtraction, multiplication, and division.  
 2. Modify the program to check if the first number is greater than the second.  
 3. Write a program that calculates the perimeter of a circle given the radius.  
+4. Write a program that swaps the values of two variables without using a third variable.  
+5. Write a program that prints the first 10 numbers in the Fibonacci sequence.  
 
 ---
 
@@ -166,3 +194,4 @@ print(a < b)   # Less than
 - Loops (for, while)  
 - Logical operators  
 - Practical exercises  
+
