@@ -1,0 +1,197 @@
+**Python Lecture 2: Control Flow in Python**
+
+**Duration:** 3 hours  
+
+---
+
+## **1. Introduction to Control Flow**  
+Control flow determines the order in which instructions in a program are executed. Python provides conditional statements and loops to control program execution.  
+
+### **Topics Covered:**
+- If-else statements
+- Loops (for, while)
+- Logical operators
+- Break and continue statements
+- Nested loops and conditionals
+
+---
+
+## **2. If-Else Statements**  
+Python uses `if`, `elif`, and `else` to execute code based on conditions.
+
+### **Syntax:**  
+```python
+if condition:
+    # Code block
+elif another_condition:
+    # Another code block
+else:
+    # Default code block
+```
+
+### **Example:**  
+```python
+age = int(input("Enter your age: "))
+if age >= 18:
+    print("You are an adult.")
+elif age >= 13:
+    print("You are a teenager.")
+else:
+    print("You are a child.")
+```
+
+### **Practice Problems:**
+1. Write a program to check if a number is positive, negative, or zero.
+2. Write a program that takes a user's marks and prints whether they passed (>=50) or failed.
+
+---
+
+## **3. Logical Operators**  
+Logical operators help evaluate multiple conditions.
+
+### **Operators:**
+- `and` - Returns `True` if both conditions are true.
+- `or` - Returns `True` if at least one condition is true.
+- `not` - Reverses the result.
+
+### **Example:**  
+```python
+temp = int(input("Enter temperature: "))
+if temp > 30 and temp < 40:
+    print("It's hot outside!")
+```
+
+### **Practice Problems:**
+3. Write a program to check if a number is in the range 1-100.
+4. Write a program to check if a year is a leap year.
+
+---
+
+## **4. Loops in Python**
+Loops are used to repeat code multiple times.
+
+### **4.1 For Loop**  
+Used for iterating over sequences.
+
+#### **Syntax:**  
+```python
+for variable in iterable:
+    # Code block
+```
+
+#### **Example:**  
+```python
+for i in range(5):
+    print("Iteration", i)
+```
+
+#### **Example (Looping through a list):**  
+```python
+fruits = ["apple", "banana", "cherry"]
+for fruit in fruits:
+    print(fruit)
+```
+
+### **Practice Problems:**
+5. Write a program that prints numbers from 1 to 10.
+6. Write a program that prints the multiplication table of a given number.
+
+---
+
+### **4.2 While Loop**  
+Used when the number of iterations is not fixed.
+
+#### **Syntax:**  
+```python
+while condition:
+    # Code block
+```
+
+#### **Example:**  
+```python
+count = 0
+while count < 5:
+    print("Count is", count)
+    count += 1
+```
+
+### **Practice Problems:**
+7. Write a program that prints numbers from 10 to 1 using a while loop.
+8. Write a program to keep asking for a password until the correct one is entered.
+
+---
+
+## **5. Break and Continue Statements**
+
+### **Break Statement:**
+Used to exit a loop prematurely.
+
+#### **Example:**  
+```python
+for i in range(10):
+    if i == 5:
+        break
+    print(i)
+```
+
+### **Continue Statement:**
+Skips the rest of the loop for the current iteration.
+
+#### **Example:**  
+```python
+for i in range(5):
+    if i == 2:
+        continue
+    print(i)
+```
+
+### **Practice Problems:**
+9. Write a program that stops printing numbers at 5 using a break statement.
+10. Write a program that skips number 3 when printing numbers from 1 to 5 using a continue statement.
+
+---
+
+## **6. Nested Loops and Conditionals**  
+Python allows loops and conditionals to be nested inside each other.
+
+#### **Example:**  
+```python
+for i in range(3):
+    for j in range(2):
+        print("i:", i, "j:", j)
+```
+
+#### **Example (Nested If):**  
+```python
+num = int(input("Enter a number: "))
+if num > 0:
+    if num % 2 == 0:
+        print("Positive even number")
+    else:
+        print("Positive odd number")
+```
+
+### **Practice Problems:**
+11. Write a program that prints a pattern of stars using nested loops.
+12. Write a program that finds all even numbers between 1 and 20 using nested if conditions.
+
+---
+
+## **7. Homework Assignment**  
+1. Write a program to check if a number is prime.
+2. Write a program that prints Fibonacci numbers up to `n` terms.
+3. Write a program to count the number of vowels in a given string.
+4. Write a program that asks for a number and prints whether it is odd or even.
+5. Write a program to print the sum of numbers from 1 to 50 using a loop.
+
+---
+
+### **Next Lecture: Functions and Modules in Python**  
+- Defining and calling functions  
+- Function arguments and return values  
+- Lambda functions  
+- Importing and using modules  
+- Writing and importing custom modules  
+
+---
+
