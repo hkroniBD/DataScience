@@ -1,133 +1,168 @@
-# **Python Programming - Lecture 1: Introduction to Python**
+**Python Lecture 1: Introduction to Python Programming**
 
-## **1. What is Python?**
-Python is a high-level, interpreted programming language known for its simplicity and readability. It is widely used in web development, data analysis, automation, artificial intelligence, and more.
-
-### **Key Features of Python:**
-- **Easy to Learn**: Simple syntax similar to English.
-- **Interpreted**: Executes code line by line, making debugging easier.
-- **Cross-Platform**: Runs on Windows, macOS, and Linux.
-- **Open-Source**: Free to use and modify.
-- **Large Community**: Supportive community and extensive libraries.
+**Duration:** 2.5 hours  
 
 ---
 
-## **2. Installing Python**
-To start programming in Python, you need to install it on your computer.
+## **1. What is Python?**  
+Python is a high-level, interpreted programming language known for its simplicity and readability. It is widely used in web development, data science, machine learning, automation, and more.
 
-### **Steps to Install Python:**
-1. **Download Python**:  
-   - Go to [python.org](https://www.python.org/downloads/) and download the latest version.
-2. **Install Python**:  
-   - Run the installer and check **"Add Python to PATH"** before clicking Install.
-3. **Verify Installation**:  
-   - Open the terminal (Command Prompt or PowerShell) and type:
-     ```bash
-     python --version
-     ```
-   - If installed correctly, it will show the Python version.
+### **Key Features of Python:**  
+- **Easy to learn:** Simple syntax similar to English.  
+- **Interpreted language:** Executes code line by line.  
+- **Dynamically typed:** No need to declare variable types.  
+- **Cross-platform:** Works on Windows, macOS, and Linux.  
+- **Large community support:** Many libraries and frameworks available.  
 
 ---
 
-## **3. Running Python Code**
-There are three main ways to run Python code:
-
-### **1. Using the Python Interpreter (Interactive Mode)**
-- Open **Command Prompt** or **Terminal** and type:
+## **2. Installing Python**  
+- Download from [python.org](https://www.python.org/downloads/)  
+- Install and verify using:  
   ```bash
-  python
+  python --version
   ```
-- You can directly type and execute Python commands:
-  ```python
-  print("Hello, World!")
-  ```
-- To exit, type `exit()` or press `Ctrl + Z` (Windows) / `Ctrl + D` (Linux/Mac).
+- Install an Integrated Development Environment (IDE):  
+  - **IDLE (built-in)**  
+  - **VS Code**  
+  - **PyCharm**  
+  - **Jupyter Notebook** (for data science)  
 
-### **2. Using a Python Script File**
-- Create a new file with a `.py` extension, e.g., `first_program.py`.
-- Write the following code in the file:
-  ```python
-  print("Hello, World!")
-  ```
-- Save the file and run it in the terminal using:
+---
+
+## **3. Writing Your First Python Program**  
+Python uses **.py** files for scripts.  
+
+### **Example: Hello World**  
+Save the following as `hello.py` and run it:  
+```python
+print("Hello, World!")
+```
+
+#### **Executing Python Code:**  
+- In the terminal:  
   ```bash
-  python first_program.py
+  python hello.py
+  ```
+- Using an interactive shell:  
+  ```python
+  >>> print("Hello, World!")
   ```
 
-### **3. Using an IDE (Integrated Development Environment)**
-- Recommended IDEs: **PyCharm, VS Code, Jupyter Notebook, or IDLE**.
-- Open the IDE, write Python code, and run it with a single click.
-
 ---
 
-## **4. First Python Program**
-Now, let’s write our first simple Python program:
+## **4. Python Syntax and Structure**  
+Python uses indentation instead of `{}` or `;` (like C or Java).  
 
+### **Example: Proper Indentation**  
 ```python
-print("Welcome to Python Programming!")
+if True:
+    print("This is correct indentation")
 ```
 
-**Explanation:**
-- `print()` is a built-in function used to display text on the screen.
-- The text inside `" "` (double quotes) is printed.
-
-**Expected Output:**
-```
-Welcome to Python Programming!
-```
-
----
-
-## **5. Python as a Calculator**
-Python can also perform mathematical operations:
-
+### **Example: Incorrect Indentation (Throws an error)**
 ```python
-print(5 + 3)   # Addition
-print(10 - 2)  # Subtraction
-print(4 * 3)   # Multiplication
-print(8 / 2)   # Division
-print(10 % 3)  # Modulus (Remainder)
-```
-
-**Output:**
-```
-8
-8
-12
-4.0
-1
+if True:
+print("This will cause an IndentationError")
 ```
 
 ---
 
-## **6. Variables in Python**
-A **variable** is used to store data in Python.
-
-Example:
+## **5. Variables and Data Types**  
+### **Declaring Variables**  
 ```python
-name = "John"
-age = 25
-height = 5.8
-
-print(name)
-print(age)
-print(height)
+name = "John"   # String
+age = 25        # Integer
+height = 5.8    # Float
+is_student = True  # Boolean
 ```
 
-**Output:**
-```
-John
-25
-5.8
+### **Checking Data Types**  
+```python
+print(type(name))   # <class 'str'>
+print(type(age))    # <class 'int'>
+print(type(height)) # <class 'float'>
+print(type(is_student)) # <class 'bool'>
 ```
 
 ---
 
-### **Conclusion**
-- You learned what Python is, how to install it, and how to write and execute simple programs.
-- You wrote your first Python program and used Python as a calculator.
-- You learned about variables.
+## **6. Basic Input and Output**  
+### **Taking User Input**  
+```python
+user_name = input("Enter your name: ")
+print("Hello,", user_name)
+```
+
+### **Converting Input Type**  
+```python
+age = int(input("Enter your age: "))
+print("Next year, you will be", age + 1)
+```
 
 ---
 
-### **Next Lecture: Python Variables and Data Types**
+## **7. Comments in Python**  
+- **Single-line comments:**  
+  ```python
+  # This is a comment
+  print("Hello, Python!")  # This is also a comment
+  ```
+- **Multi-line comments:**  
+  ```python
+  """
+  This is a multi-line comment
+  that spans multiple lines.
+  """
+  ```
+
+---
+
+## **8. Basic Operators**  
+### **Arithmetic Operators**  
+```python
+a = 10
+b = 3
+print(a + b)  # Addition
+print(a - b)  # Subtraction
+print(a * b)  # Multiplication
+print(a / b)  # Division
+print(a // b) # Floor Division
+print(a % b)  # Modulus
+print(a ** b) # Exponentiation
+```
+
+### **Comparison Operators**
+```python
+print(a == b)  # Equal to
+print(a != b)  # Not equal to
+print(a > b)   # Greater than
+print(a < b)   # Less than
+```
+
+---
+
+## **9. Practice Problems**
+### **Beginner Level**
+1. Write a program that prints "Python is amazing!"  
+2. Write a program that takes your name as input and greets you.  
+3. Write a program that takes two numbers as input and prints their sum.  
+
+### **Intermediate Level**
+4. Write a program that converts Celsius to Fahrenheit.  
+5. Write a program that calculates the area of a rectangle given length and width.  
+
+---
+
+## **10. Homework Assignment**
+1. Write a Python program that asks for two numbers and performs addition, subtraction, multiplication, and division.  
+2. Modify the program to check if the first number is greater than the second.  
+3. Write a program that calculates the perimeter of a circle given the radius.  
+
+---
+
+### **Next Lecture: Control Flow in Python**  
+- If-else statements  
+- Loops (for, while)  
+- Logical operators  
+- Practical exercises  
