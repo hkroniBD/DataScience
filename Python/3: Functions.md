@@ -110,38 +110,8 @@ def test():
 test()
 ```
 
----
 
-## **5. Introduction to Modules**  
-A module is a Python file containing functions and variables that can be imported into other scripts.
-
-### **Creating and Importing a Module**  
-- Save the following as `my_module.py`:
-  ```python
-  def greet(name):
-      return f"Hello, {name}!"
-  ```
-- Import and use the module:
-  ```python
-  import my_module
-  print(my_module.greet("Alice"))
-  ```
-
-### **Using Built-in Modules**  
-```python
-import math
-print(math.sqrt(16))  # Output: 4.0
-```
-
-### **Importing Specific Functions**  
-```python
-from math import sqrt
-print(sqrt(25))  # Output: 5.0
-```
-
----
-
-## **6. Practice Problems**  
+## **5. Practice Problems**  
 ### **Beginner Level**  
 1. Write a function to calculate the square of a number.  
 2. Write a function to greet a user by their name.  
@@ -165,9 +135,4 @@ print(sqrt(25))  # Output: 5.0
 5. Write a function that checks if a given number is a palindrome.  
 
 ---
-
-### **Next Lecture: Working with Data Structures in Python**  
-- Lists, Tuples, Dictionaries, and Sets  
-- Operations on Data Structures  
-- Practical Examples and Exercises  
 
