@@ -1,8 +1,3 @@
-Certainly, HK Roni Sir. Below is a detailed outline and content for Lecture 1: Introduction to Machine Learning. This lecture is designed for students who are new to the topic.
-
-
----
-
 Lecture 1: Introduction to Machine Learning
 
 1. Lecture Objectives
