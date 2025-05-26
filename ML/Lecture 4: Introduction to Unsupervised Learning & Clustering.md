@@ -1,6 +1,5 @@
 ## 🎓 **Lecture 4: Introduction to Unsupervised Learning & Clustering**
 
-**Series:** Machine Learning for Non-IT Students
 **Instructor:** HK Roni, EEE, HSTU
 
 ---
