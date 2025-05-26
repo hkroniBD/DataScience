@@ -1,6 +1,5 @@
 ## 🎓 **Lecture 5: Data Preprocessing in Machine Learning**
 
-**Series:** Machine Learning for Non-IT Students
 **Instructor:** HK Roni, EEE, HSTU
 
 ---
