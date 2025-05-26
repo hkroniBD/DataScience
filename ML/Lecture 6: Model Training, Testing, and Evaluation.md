@@ -1,6 +1,5 @@
 ## 🎓 **Lecture 6: Model Training, Testing, and Evaluation**
 
-**Series:** Machine Learning for Non-IT Students
 **Instructor:** HK Roni, EEE, HSTU
 
 ---
