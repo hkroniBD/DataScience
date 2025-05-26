@@ -1,6 +1,6 @@
 ## 🎓 **Lecture 2: Types of Machine Learning & Basic Classification**
 
-**Series:** Machine Learning for Non-IT Students
+
 **Instructor:** HK Roni, EEE, HSTU
 
 ---
