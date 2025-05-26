@@ -1,6 +1,6 @@
 ## 🎓 **Lecture 3: Introduction to Regression in Machine Learning**
 
-**Series:** Machine Learning for Non-IT Students
+
 **Instructor:** HK Roni, EEE, HSTU
 
 ---
