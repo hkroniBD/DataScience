@@ -1,134 +1,156 @@
-### **Lecture 2: Supervised Learning**
-
-#### **1. Lecture Objectives**
-
-* Define supervised learning and its characteristics
-* Differentiate between classification and regression
-* Understand key algorithms in supervised learning
-* Learn evaluation metrics for supervised models
-* Apply concepts to a simple case study using Python (optional)
+# **Lecture 2: Supervised Learning - Regression & Classification**  
+**Duration:** 1.5 Hours  
+**Objective:**  
+- Understand supervised learning in depth.  
+- Learn regression and classification algorithms.  
+- Implement models using real-world datasets.  
+- Evaluate model performance.  
 
 ---
 
-### **2. What is Supervised Learning?**
+## **Part 1: Recap & Introduction (10 min)**  
+### **1.1 Review of Lecture 1**  
+- What is Machine Learning?  
+- Types of ML: Supervised, Unsupervised, Reinforcement.  
+- When to use ML?  
 
-> **Definition:** Supervised learning is a type of machine learning where the model is trained using labeled data—that is, data that includes both input features and the correct output.
-
-#### **Characteristics**
-
-* Input-output pairs are known
-* Goal is to learn a mapping from inputs (X) to outputs (Y)
-* Feedback is direct and immediate during training
-
----
-
-### **3. Types of Supervised Learning**
-
-#### **A. Classification**
-
-* Predict **discrete** labels
-* **Examples:**
-
-  * Email spam detection (Spam/Not Spam)
-  * Disease diagnosis (Positive/Negative)
-* **Common Algorithms:**
-
-  * Logistic Regression
-  * k-Nearest Neighbors (k-NN)
-  * Decision Trees
-  * Support Vector Machines (SVM)
-  * Naïve Bayes
-
-#### **B. Regression**
-
-* Predict **continuous** values
-* **Examples:**
-
-  * House price prediction
-  * Stock market forecasting
-* **Common Algorithms:**
-
-  * Linear Regression
-  * Polynomial Regression
-  * Support Vector Regression (SVR)
-  * Decision Tree Regressor
+### **1.2 Focus of Lecture 2**  
+- **Supervised Learning**: Regression & Classification.  
+- Hands-on coding (Python).  
 
 ---
 
-### **4. Supervised Learning Workflow**
+## **Part 2: Regression (30 min)**  
+### **2.1 What is Regression?**  
+- **Goal**: Predict continuous values (e.g., house prices, temperature).  
+- **Examples**:  
+  - Predicting stock prices.  
+  - Estimating sales revenue.  
 
-1. **Data Collection**
-2. **Data Preprocessing** (handle missing values, encode categories, scale features)
-3. **Split Dataset** (Train/Test split)
-4. **Model Training**
-5. **Prediction**
-6. **Evaluation**
+### **2.2 Linear Regression**  
+- **Concept**: Fit a straight line to data (`y = mx + b`).  
+- **Assumptions**:  
+  - Linear relationship between X and y.  
+  - Low multicollinearity.  
 
----
-
-### **5. Evaluation Metrics**
-
-#### **For Classification:**
-
-* Accuracy
-* Precision, Recall, F1-Score
-* Confusion Matrix
-* ROC-AUC Curve
-
-#### **For Regression:**
-
-* Mean Absolute Error (MAE)
-* Mean Squared Error (MSE)
-* Root Mean Squared Error (RMSE)
-* R-squared (R²)
-
----
-
-### **6. Case Study (Simple Python Example)**
-
-You may walk through a basic example using the Iris dataset for classification or Boston housing dataset for regression using `scikit-learn`.
-
+#### **Demo: House Price Prediction**  
 ```python
-from sklearn.datasets import load_iris
-from sklearn.model_selection import train_test_split
-from sklearn.tree import DecisionTreeClassifier
-from sklearn.metrics import accuracy_score
+from sklearn.linear_model import LinearRegression
+from sklearn.metrics import mean_squared_error
 
-# Load dataset
-data = load_iris()
-X, y = data.data, data.target
-
-# Split data
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2)
-
-# Train model
-model = DecisionTreeClassifier()
+# Load dataset (e.g., Boston Housing)
+X, y = load_data()
+model = LinearRegression()
 model.fit(X_train, y_train)
-
-# Predict
-y_pred = model.predict(X_test)
+predictions = model.predict(X_test)
 
 # Evaluate
-print("Accuracy:", accuracy_score(y_test, y_pred))
+mse = mean_squared_error(y_test, predictions)
+print(f"Mean Squared Error: {mse}")
+```
+
+### **2.3 Polynomial Regression**  
+- **Use Case**: Non-linear relationships (e.g., growth curves).  
+- **Code**:  
+```python
+from sklearn.preprocessing import PolynomialFeatures
+
+poly = PolynomialFeatures(degree=2)
+X_poly = poly.fit_transform(X)
+model.fit(X_poly, y)
 ```
 
 ---
 
-### **7. Summary**
+## **Part 3: Classification (30 min)**  
+### **3.1 What is Classification?**  
+- **Goal**: Predict categories (e.g., spam/not spam, disease diagnosis).  
+- **Examples**:  
+  - Email spam detection.  
+  - Medical diagnosis (cancer: yes/no).  
 
-* Supervised learning uses labeled data to train models
-* Two main tasks: classification and regression
-* Multiple algorithms are available for each task
-* Model performance should be evaluated using appropriate metrics
+### **3.2 Logistic Regression**  
+- **Concept**: Predicts probabilities (0 to 1) using the sigmoid function.  
+- **Code**:  
+```python
+from sklearn.linear_model import LogisticRegression
+
+model = LogisticRegression()
+model.fit(X_train, y_train)
+predictions = model.predict(X_test)
+```
+
+### **3.3 Decision Trees & Random Forest**  
+- **Decision Trees**:  
+  - Splits data into branches based on features.  
+  - **Code**:  
+  ```python
+  from sklearn.tree import DecisionTreeClassifier
+  model = DecisionTreeClassifier()
+  model.fit(X_train, y_train)
+  ```  
+
+- **Random Forest**:  
+  - Ensemble of decision trees (improves accuracy).  
+  - **Code**:  
+  ```python
+  from sklearn.ensemble import RandomForestClassifier
+  model = RandomForestClassifier(n_estimators=100)
+  model.fit(X_train, y_train)
+  ```
 
 ---
 
-### **8. Assignment**
+## **Part 4: Model Evaluation (20 min)**  
+### **4.1 Regression Metrics**  
+- **Mean Squared Error (MSE)**: Lower = better.  
+- **R-squared (R²)**: 0 to 1 (higher = better fit).  
 
-* Choose a dataset (e.g., from Kaggle or UCI Repository)
-* Perform a basic classification or regression task
-* Submit a brief report with your code and performance metrics
+### **4.2 Classification Metrics**  
+- **Confusion Matrix**:  
+  - True Positives (TP), False Positives (FP), etc.  
+- **Accuracy, Precision, Recall, F1-Score**:  
+  ```python
+  from sklearn.metrics import classification_report
+  print(classification_report(y_test, predictions))
+  ```
+
+#### **Demo: Model Evaluation**  
+```python
+# For classification
+from sklearn.metrics import accuracy_score
+accuracy = accuracy_score(y_test, predictions)
+print(f"Accuracy: {accuracy}")
+
+# For regression
+from sklearn.metrics import r2_score
+r2 = r2_score(y_test, predictions)
+print(f"R-squared: {r2}")
+```
 
 ---
 
+## **Part 5: Summary & Q&A (10 min)**  
+### **Key Takeaways**:  
+- **Regression**: Predict numbers (Linear, Polynomial).  
+- **Classification**: Predict categories (Logistic Regression, Decision Trees).  
+- **Evaluation**: MSE/R² (Regression), Accuracy/Precision (Classification).  
 
+### **Q&A**:  
+- When to use Logistic vs. Linear Regression?  
+- Why Random Forest over Decision Trees?  
+
+### **Preview Next Lecture**:  
+- **Unsupervised Learning (Clustering & Dimensionality Reduction)**.  
+- **Lab**: K-Means Clustering.  
+
+---
+
+### **Lecture Materials**:  
+- Jupyter Notebook with code examples.  
+- Datasets: Boston Housing, Iris, Pima Diabetes.  
+- Cheat sheet: Regression vs. Classification.  
+
+**End of Lecture 2** 🚀  
+
+---
