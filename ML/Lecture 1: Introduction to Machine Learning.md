@@ -1,6 +1,6 @@
 ## 🎓 **Lecture 1: Introduction to Machine Learning**
 
-**Series:** Machine Learning for Non-IT Students
+
 **Instructor:** HK Roni, EEE, HSTU
 
 ---
